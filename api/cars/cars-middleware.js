@@ -1,4 +1,4 @@
-
+const { getAll, getById, create } = require('./cars-model')
 
 // checkCarId returns a status 404 with a { message: "car with id <car id> is not found" } if the id in req.params does not exist in the database.
 const checkCarId = (req, res, next) => {
