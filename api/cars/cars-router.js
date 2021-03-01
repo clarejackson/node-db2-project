@@ -31,3 +31,5 @@ router.post('/', checkCarPayload, checkVinNumberUnique, checkVinNumberValid, asy
     next(err)
   }
 })
+
+module.exports = router;
