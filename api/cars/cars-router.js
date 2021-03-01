@@ -25,7 +25,7 @@ router.get('/:id', checkCarId, async (req, res, next) => {
 // [POST] /api/cars returns the created car. Leading or trailing whitespace on budget name should be trimmed before saving to db.
 router.post('/', checkCarPayload, checkVinNumberUnique, checkVinNumberValid, async (req, res, next) => {
   try {
-    const newCar = cars.create(res.car)
+    const newCar = cars.create(req.body)
     res.status(201).json(newCar)
   } catch (err) {
     next(err)
