@@ -7,7 +7,7 @@ const getAll = () => {
 }
 
 // getById resolves to a car record by the given id
-const getById = () => {
+const getById = (id) => {
   // DO YOUR MAGIC
   return db.select("*")
   .from('cars')
