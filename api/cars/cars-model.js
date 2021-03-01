@@ -16,7 +16,7 @@ const getById = () => {
 }
 
 // create resolves to the newly created car record
-const create = await (cars) => {
+const create = async (cars) => {
   // DO YOUR MAGIC
   const [id] = await db
   .insert({
